@@ -8,4 +8,6 @@ An R package to expand alphanumeric ranges in strings.
 
 "C - F" -> c("C","D","E","F")
 
-"40-43" -> "40/41/42/43"
+"40-45" -> "40/41/42/43/44/45"
+
+"AB-AH" -> "AB,AC,AD,AE,AF,AG,AH"
