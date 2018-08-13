@@ -21,6 +21,9 @@
 #' @examples
 #' `expand_numeric("Precincts 1-5")`
 #' `expand_numeric("Precincts 1-5,7-9", replace = TRUE)`
+#'
+#' @importFrom magrittr %>%
+#' @export
 
 expand_numeric <- function(x, sep = NULL, replace = FALSE) {
   if(is.null(sep) & isTRUE(replace)) stop("If `sep` is set to `NULL`, there can be no string replacement.")

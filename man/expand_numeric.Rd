@@ -26,4 +26,5 @@ Expands a range of integers into all the integers it contains
 \examples{
 `expand_numeric("Precincts 1-5")`
 `expand_numeric("Precincts 1-5,7-9", replace = TRUE)`
+
 }
