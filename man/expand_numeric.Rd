@@ -2,23 +2,28 @@
 % Please edit documentation in R/expand.R
 \name{expand_numeric}
 \alias{expand_numeric}
-\title{Expands a range of integerss into all the integers it contains}
+\title{Expands a range of integers into all the integers it contains}
 \usage{
-expand_numeric(x, sep)
+expand_numeric(x, sep = NULL, replace = FALSE)
 }
 \arguments{
-\item{x}{A string containing a condensed range of numbers; "a-b".}
+\item{x}{A character vector containing condensed ranges of numbers;
+"a-b" or "a - b".}
 
 \item{sep}{The character separating the integers for output. Defaults to `NULL`,
-which will return a vector.}
+which will return a list of integer vectors.}
+
+\item{replace}{Controls if the expanded range is extracted into a list (`FALSE`) or replaced
+within the strings (`TRUE)`)}
 }
 \value{
-Either a vector of integers (if `sep == NULL`) or a character string.
+Either a list of character vectors (if `replace == FALSE`) or a character vector
+similar to the input vector.
 }
 \description{
-Expands a range of integerss into all the integers it contains
+Expands a range of integers into all the integers it contains
 }
 \examples{
-`expand_numeric("1-5")`
-`expand_numeric("20-26", sep = " | ")`
+`expand_numeric("Precincts 1-5")`
+`expand_numeric("Precincts 1-5,7-9", replace = TRUE)`
 }
